@@ -6,7 +6,7 @@ let i18n = {};
 let theme = {};
 
 introduce.install = `
-$ npm install iview --save
+$ npm install iviews --save
 `;
 
 introduce.script= `
@@ -70,7 +70,7 @@ install.demo = `
 `;
 
 install.install = `
-$ npm install iview --save
+$ npm install iviews --save
 `;
 
 install.import = `

@@ -3,11 +3,6 @@
 </style>
 <template>
     <div class="navigate">
-        <div class="ad" @click="handleAd">
-            <div class="ad-main">
-                <img src="../images/ad.png">
-            </div>
-        </div>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
             <Menu-item v-for="item in navigate.guide" :key="item.path" :name="item.path">
                 <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
@@ -27,7 +22,6 @@
                     </Badge>
                 </template>
             </Menu-item>
-            <Button type="primary" icon="social-usd" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">{{ $t('index.donate') }}</Button>
             <div class="navigate-group">{{ $t('index.component') }}</div>
             <Menu-group v-for="item in navigate.components" :key="item.type" :title="item.type">
                 <Menu-item v-for="component in item.list" :key="component.path" :name="component.path">
@@ -52,11 +46,6 @@
                 <template v-else>{{ item.titleEn }}</template>
             </Menu-item>
         </Menu>
-        <Modal v-model="showAd" title="Recruiting Translation Volunteer">
-            <div class="i-article">
-                <p style="font-size: 16px;">iView team are recruting volunteers to help us translate the document. If you master both Chinese and English, we are looking forward to your joining in our translation plan and help us improve iView. If you want to join in the translation plan, please send E-Mail to <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>
-            </div>
-        </Modal>
     </div>
 </template>
 <script>
@@ -88,11 +77,6 @@
                 this.$nextTick(() => {
                     this.$router.push(path);
                 });
-            },
-            handleAd () {
-//                this.$router.push('/live');
-//                this.showAd = true;
-                window.open('https://www.iviewui.com/vue-book');
             }
         },
         created () {

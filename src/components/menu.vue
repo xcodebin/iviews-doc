@@ -6,9 +6,6 @@
 <template>
     <Menu mode="horizontal" :active-name="currentActiveKey" @on-select="handleSelect">
         <div class="wrapper-header-nav">
-            <router-link to="/" class="wrapper-header-nav-logo">
-                <img src="../images/logo-doc.png">
-            </router-link>
             <div class="wrapper-header-nav-search">
                 <i-select
                     ref="select"
@@ -24,36 +21,10 @@
                 </i-select>
             </div>
             <div class="wrapper-header-nav-list">
-                <Menu-item name="guide">
-                    <Icon type="ios-navigate"></Icon>
-                    {{ $t('index.guide') }}
-                </Menu-item>
                 <Menu-item name="component">
                     <Icon type="ios-keypad"></Icon>
                     {{ $t('index.component') }}
                 </Menu-item>
-                <Menu-item name="cli">
-                    <Icon type="settings"></Icon>
-                    {{ $t('index.cli') }}
-                </Menu-item>
-                <Menu-item name="live">
-                    <Badge :dot="liveDot">
-                        <Icon type="ios-videocam"></Icon>
-                        {{ $t('index.live') }}
-                    </Badge>
-                </Menu-item>
-                <Menu-item name="practice">
-                    <Icon type="ios-analytics"></Icon>
-                    {{ $t('index.practice') }}
-                </Menu-item>
-                <Select size="small" value="2" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">
-                    <Option value="2">2.x</Option>
-                    <Option value="1">1.x</Option>
-                </Select>
-                <Button type="ghost" size="small" @click="handleChangeLang" >
-                    <template v-if="lang === 'zh-CN'">EN</template>
-                    <template v-else>中文</template>
-                </Button>
             </div>
         </div>
     </Menu>
@@ -122,10 +93,6 @@
             updateActiveNav () {
                 const componentList = [
                     '/docs/guide/install',
-                    '/docs/guide/start',
-                    '/docs/guide/i18n',
-                    '/docs/guide/theme',
-                    '/overview',
                     '/docs/guide/update'
                 ];
 

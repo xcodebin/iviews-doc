@@ -9,188 +9,20 @@ const routers = [
         },
         component: (resolve) => require(['./views/index.vue'], resolve)
     },
-    {
-        path: '/vue-book',
-        meta: {
-            title: '《Vue.js 实战》预购'
-        },
-        component: (resolve) => require(['./views/vue-book.vue'], resolve)
-    },
-    {
-        path: '/cli',
-        meta: {
-            title: 'iView Cli 可视化脚手架'
-        },
-        component: (resolve) => require(['./views/cli.vue'], resolve)
-    },
-    {
-        path: '/cli-en',
-        meta: {
-            title: 'iView Cli'
-        },
-        component: (resolve) => require(['./views/cli-en.vue'], resolve)
-    },
-    {
-        path: '/live',
-        meta: {
-            title: '讲堂'
-        },
-        component: (resolve) => require(['./views/live.vue'], resolve)
-    },
-    {
-        path: '/overview',
-        meta: {
-            title: '概览'
-        },
-        component: (resolve) => require(['./views/guide/overview.vue'], resolve)
-    },
-    {
-        path: '/overview-en',
-        meta: {
-            title: 'Overview'
-        },
-        component: (resolve) => require(['./views/guide/overview-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/introduce',
-        meta: {
-            title: 'iView介绍'
-        },
-        component: (resolve) => require(['./views/guide/introduce.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/introduce-en',
-        meta: {
-            title: 'Introduction'
-        },
-        component: (resolve) => require(['./views/guide/introduce-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/design',
-        meta: {
-            title: '设计原则'
-        },
-        component: (resolve) => require(['./views/guide/design.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/design-en',
-        meta: {
-            title: 'Design Principle'
-        },
-        component: (resolve) => require(['./views/guide/design-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/layout',
-        meta: {
-            title: '布局'
-        },
-        component: (resolve) => require(['./views/guide/layout.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/layout-en',
-        meta: {
-            title: 'Layout'
-        },
-        component: (resolve) => require(['./views/guide/layout-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/standard',
-        meta: {
-            title: '参与贡献'
-        },
-        component: (resolve) => require(['./views/guide/standard.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/standard-en',
-        meta: {
-            title: 'Contributing Guide'
-        },
-        component: (resolve) => require(['./views/guide/standard-en.vue'], resolve)
-    },
-    {
-        path: '/docs/practice/case',
-        meta: {
-            title: '实践案例'
-        },
-        component: (resolve) => require(['./views/practice/case.vue'], resolve)
-    },
-    {
-        path: '/docs/practice/case-en',
-        meta: {
-            title: 'Practical Cases'
-        },
-        component: (resolve) => require(['./views/practice/case-en.vue'], resolve)
-    },
-    {
-        path: '/docs/practice/logo',
-        meta: {
-            title: 'iView Logo Design'
-        },
-        component: (resolve) => require(['./views/practice/logo.vue'], resolve)
-    },
-    {
-        path: '/docs/practice/logo-en',
-        meta: {
-            title: 'iView Logo 设计思路'
-        },
-        component: (resolve) => require(['./views/practice/logo-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/install',
-        meta: {
-            title: '安装'
-        },
-        component: (resolve) => require(['./views/guide/install.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/install-en',
-        meta: {
-            title: 'Installation'
-        },
-        component: (resolve) => require(['./views/guide/install-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/start',
-        meta: {
-            title: '快速上手'
-        },
-        component: (resolve) => require(['./views/guide/start.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/start-en',
-        meta: {
-            title: 'Quick Start'
-        },
-        component: (resolve) => require(['./views/guide/start-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/i18n',
-        meta: {
-            title: '国际化'
-        },
-        component: (resolve) => require(['./views/guide/i18n.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/i18n-en',
-        meta: {
-            title: 'Internationalization'
-        },
-        component: (resolve) => require(['./views/guide/i18n-en.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/theme',
-        meta: {
-            title: '定制主题'
-        },
-        component: (resolve) => require(['./views/guide/theme.vue'], resolve)
-    },
-    {
-        path: '/docs/guide/theme-en',
-        meta: {
-            title: 'Customize Theme'
-        },
-        component: (resolve) => require(['./views/guide/theme-en.vue'], resolve)
-    },
+	{
+		path: '/docs/guide/install',
+		meta: {
+			title: '安装'
+		},
+		component: (resolve) => require(['./views/guide/install.vue'], resolve)
+	},
+	{
+		path: '/docs/guide/install-en',
+		meta: {
+			title: 'Installation'
+		},
+		component: (resolve) => require(['./views/guide/install-en.vue'], resolve)
+	},
     {
         path: '/docs/guide/update',
         meta: {

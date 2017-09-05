@@ -25,6 +25,7 @@ config.plugins = (config.plugins || []).concat([
     }),
     new HtmlWebpackPlugin({
         filename: './index.html',
+	    favicon: 'favicon.ico',
         template: './src/template/index.ejs',
         inject: false
     })

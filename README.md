@@ -1,2 +1,2 @@
-# iview-doc
-Doc of iView
+# iviews-doc
+Doc of iViews
