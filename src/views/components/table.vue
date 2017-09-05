@@ -616,7 +616,7 @@
                 </div>
             </article>
         </i-article>
-        <Modal v-model="table1" title="带有分页的复杂表格" width="1000" :spinhow="false" :styles="{top: '20px'}">
+        <Modal v-model="table1" title="带有分页的复杂表格" width="1000" :spinShow="false" :styles="{top: '20px'}">
             <div v-if="table1">
                 <div class="ivu-article">
                     <blockquote>
@@ -632,7 +632,7 @@
                 <i-code lang="html" bg>{{ code.table1 }}</i-code>
             </div>
         </Modal>
-        <Modal v-model="table2" title="多列指标筛选的表格" width="1000" :spinhow="false" :styles="{top: '20px'}">
+        <Modal v-model="table2" title="多列指标筛选的表格" width="1000" :spinShow="false" :styles="{top: '20px'}">
             <div v-if="table2">
                 <div class="ivu-article">
                     <blockquote>
@@ -658,7 +658,7 @@
                 <i-code lang="html" bg>{{ code.table2 }}</i-code>
             </div>
         </Modal>
-        <Modal v-model="table3" title="多种效果组合的表格" width="1000" :spinhow="false" :styles="{top: '20px'}">
+        <Modal v-model="table3" title="多种效果组合的表格" width="1000" :spinShow="false" :styles="{top: '20px'}">
             <div v-if="table3">
                 <div class="ivu-article">
                     <blockquote>
