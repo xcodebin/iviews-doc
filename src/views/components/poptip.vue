@@ -242,6 +242,18 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>isOkShow</td>
+                            <td>确认按钮是否展示</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>isCancelShow</td>
+                            <td>取消按钮是否展示</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Poptip events" h3></Anchor>

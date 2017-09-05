@@ -148,6 +148,12 @@
                             <td>Object</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>page-ooltip</td>
+                            <td>是否展示提示文字</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Page events" h3></Anchor>
@@ -185,6 +191,12 @@
                             <td>无</td>
                             <td>自定义显示总数的内容</td>
                         </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td>page-btn </td>
+                        <td>中间可以放置按钮的区域</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
