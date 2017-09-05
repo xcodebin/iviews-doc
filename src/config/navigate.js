@@ -24,6 +24,12 @@ const list = {
                     img: 'grid.png',
                     icon: 'ios-grid-view-outline'
                 },
+	            {
+		            title: 'Scrollbar 滚动条',
+		            path: '/components/scrollbar',
+		            img: 'grid.png',
+		            icon: 'ios-grid-view-outline'
+	            },
                 {
                     title: 'Layout 布局',
                     path: '/components/layout',

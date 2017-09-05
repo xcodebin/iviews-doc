@@ -646,6 +646,13 @@ const routers = [
         },
         component: (resolve) => require(['./views/components/affix.vue'], resolve)
     },
+	{
+		path: '/components/scrollbar',
+		meta: {
+			title: '滚动条 scrollbar'
+		},
+		component: (resolve) => require(['./views/components/scrollbar.vue'], resolve)
+	},
     {
         path: '/components/affix-en',
         meta: {
