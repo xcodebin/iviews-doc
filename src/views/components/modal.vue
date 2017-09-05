@@ -216,9 +216,27 @@
                         </tr>
                         <tr>
                             <td>title</td>
-                            <td>对话框标题，如果使用 slot 自定义了页头，则 title 无效</td>
+                            <td>对话框标题，如果使用 slot 自定义了页头，则 title 无效 传""不展示标题</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>title-icon</td>
+                            <td>modal标题icon type  不传不展示</td>
+                            <td>String</td>
+                            <td>teal</td>
+                        </tr>
+                        <tr>
+                            <td>title-icon-color</td>
+                            <td>modal标题icon颜色</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>mask-show</td>
+                            <td>是否显示遮罩层</td>
+                            <td>Boolean</td>
+                            <td>true</td>
                         </tr>
                         <tr>
                             <td>closable</td>
@@ -251,10 +269,46 @@
                             <td>确定</td>
                         </tr>
                         <tr>
+                            <td>okShow</td>
+                            <td>是否展示确定按钮</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
                             <td>cancel-text</td>
                             <td>取消按钮文字</td>
                             <td>String</td>
                             <td>取消</td>
+                        </tr>
+                        <tr>
+                            <td>cancelShow</td>
+                            <td>是否展示取消按钮</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>prevBtnText</td>
+                            <td>上一步按钮文本文字</td>
+                            <td>String</td>
+                            <td>上一步</td>
+                        </tr>
+                        <tr>
+                            <td>prevShow</td>
+                            <td>是否展示上一步按钮</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>nextBtnText</td>
+                            <td>下一步按钮文本文字</td>
+                            <td>String</td>
+                            <td>下一步</td>
+                        </tr>
+                        <tr>
+                            <td>nextShow</td>
+                            <td>是否展示下一步按钮</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>width</td>
@@ -318,6 +372,41 @@
                         <tr>
                             <td>on-cancel</td>
                             <td>点击取消的回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-prev</td>
+                            <td>上一步按钮点击回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-next</td>
+                            <td>下一步按钮点击回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-after-load</td>
+                            <td>load结束后方法回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-before-show</td>
+                            <td>窗口展示前方法回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-after-show</td>
+                            <td>窗口展示后方法回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-before-close</td>
+                            <td>窗口关闭前方法回调</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>on-after-close</td>
+                            <td>窗口关闭后方法回调</td>
                             <td>无</td>
                         </tr>
                     </tbody>
