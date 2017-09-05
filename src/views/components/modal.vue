@@ -286,6 +286,18 @@
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
+                        <tr>
+                            <td>spinShow</td>
+                            <td>s是否展示loading</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>spinTimeout</td>
+                            <td> loading效果超时设置 毫秒</td>
+                            <td>String/Number</td>
+                            <td>8000</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Modal events" h3></Anchor>
