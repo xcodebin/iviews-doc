@@ -17,7 +17,6 @@ config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路
 config.plugins = (config.plugins || []).concat([
     new ExtractTextPlugin({
         filename: '[name].[hash].css',
-	    favicon: 'favicon.ico',
         disable: false,
         allChunks: true
     }),
@@ -37,6 +36,7 @@ config.plugins = (config.plugins || []).concat([
     }),
     new HtmlWebpackPlugin({
         filename: '../index_prod.html',
+	    favicon: 'favicon.ico',
         template: './src/template/index.ejs',
         inject: false
     })
