@@ -325,6 +325,12 @@
                             <td>String</td>
                             <td>暂无筛选结果</td>
                         </tr>
+                        <tr>
+                            <td>single-check</td>
+                            <td>带checkbox的单选</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="Table events" h3></Anchor>
