@@ -13,7 +13,7 @@ module.exports = {
     // 入口
     entry: {
         main: './src/main',
-        vendors: ['vue', 'vue-router', 'iview', 'highlightjs/highlight.pack.js', 'clipboard']
+        vendors: ['vue', 'vue-router', 'iviews', 'highlightjs/highlight.pack.js', 'clipboard']
     },
     // 输出
     output: {
@@ -42,7 +42,7 @@ module.exports = {
                 }
             },
             {
-                test: /iview\/.*?js$/,
+                test: /iviews\/.*?js$/,
                 loader: 'babel-loader'
             },
             {
