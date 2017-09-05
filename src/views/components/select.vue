@@ -293,6 +293,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>scrollbar</td>
+                            <td>是否使用虚拟滚动条模式</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Select events" h3></Anchor>
