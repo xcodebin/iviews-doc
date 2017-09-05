@@ -54,15 +54,6 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.mini }}</i-code>
             </Demo>
-            <Demo title="简洁">
-                <div slot="demo">
-                    <Page :current="2" :total="50" simple></Page>
-                </div>
-                <div slot="desc">
-                    <p>设置<code>simple</code>属性即可使用简洁版的分页，通过输入页码回车切换，或使用鼠标点击切换页码，或使用键盘的上下键来切换。简洁分页不能使用总数、电梯和切换数量。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.simple }}</i-code>
-            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Page props" h3></Anchor>
