@@ -331,6 +331,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>row-linkage</td>
+                            <td>行点击与选中是否联动</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="Table events" h3></Anchor>
