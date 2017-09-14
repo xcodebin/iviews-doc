@@ -267,15 +267,15 @@
                         </tr>
                         <tr>
                             <td>width</td>
-                            <td>表格宽度，注意：文字只支持百分数，具体像素值请写数字</td>
-                            <td>Number | String</td>
-                            <td>自动</td>
+                            <td>表格宽度</td>
+                            <td>Number</td>
+                            <td>100%</td>
                         </tr>
                         <tr>
                             <td>height</td>
-                            <td>表格高度，注意：(文字只支持百分数，具体像素值请写数字)设置后，如果表格内容大于此值，会固定表头</td>
-                            <td>Number | String</td>
-                            <td>-</td>
+                            <td>表格高度，设置后，如果表格内容大于此值，会固定表头</td>
+                            <td>Number</td>
+                            <td>100%</td>
                         </tr>
                         <tr>
                             <td>disabled-hover</td>
