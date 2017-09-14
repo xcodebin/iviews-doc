@@ -535,7 +535,7 @@
                         <tr>
                             <td>width</td>
                             <td>列宽</td>
-                            <td>Number</td>
+                            <td>Number/百分数文字</td>
                             <td>-</td>
                         </tr>
                         <tr>
