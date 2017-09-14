@@ -267,13 +267,13 @@
                         </tr>
                         <tr>
                             <td>width</td>
-                            <td>表格宽度</td>
+                            <td>表格宽度（不支持百分比）</td>
                             <td>Number</td>
                             <td>100%</td>
                         </tr>
                         <tr>
                             <td>height</td>
-                            <td>表格高度，设置后，如果表格内容大于此值，会固定表头</td>
+                            <td>表格高度，设置后，如果表格内容大于此值，会固定表头（不支持百分比）</td>
                             <td>Number</td>
                             <td>100%</td>
                         </tr>
