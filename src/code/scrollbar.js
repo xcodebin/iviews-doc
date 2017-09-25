@@ -2,8 +2,10 @@ let code = {};
 
 code.base = `
 <template>
-     <Scrollbar style="width:400px;height:400px;">
-         <div style="height:500px;heigh:500px;background-color: #a2ff82"></div>
+     <Scrollbar style="width:400px;height:400px;" ref="scro">
+         <div style="height:500px;heigh:500px;background-color: #a2ff82">
+         	这一层div是必要的，这一层不要用组建代替。
+		</div>
      </Scrollbar>
 </template>
 <script>
