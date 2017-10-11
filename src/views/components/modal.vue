@@ -352,6 +352,12 @@
                             <td>String/Number</td>
                             <td>8000</td>
                         </tr>
+                        <tr>
+                            <td> footerHide</td>
+                            <td> 是否隐藏底部</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Modal events" h3></Anchor>
