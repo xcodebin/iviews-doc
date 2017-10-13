@@ -290,6 +290,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>loading</td>
+                            <td>加载中 </td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
                             <td>row-class-name</td>
                             <td>
                                 行的 className 的回调方法，传入参数：
@@ -446,6 +452,10 @@
                         <tr>
                             <td>header</td>
                             <td>表头</td>
+                        </tr>
+                        <tr>
+                            <td>loading</td>
+                            <td>加载中区域文字</td>
                         </tr>
                         <tr>
                             <td>footer</td>
