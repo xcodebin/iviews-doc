@@ -254,6 +254,12 @@
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
+                        <tr>
+                            <td>icon</td>
+                            <td>问号图标是否展示</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Poptip events" h3></Anchor>
@@ -303,7 +309,7 @@
                         </tr>
                         <tr>
                             <td>title</td>
-                            <td>提示框标题，定义此 slot 时，会覆盖 props <code>title</code></td>
+                            <td>提示框标题附加<code>title</code></td>
                         </tr>
                         <tr>
                             <td>content</td>
