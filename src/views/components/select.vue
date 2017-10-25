@@ -294,10 +294,10 @@
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>scrollbar</td>
-                            <td>是否使用虚拟滚动条模式</td>
-                            <td>Boolean</td>
-                            <td>false</td>
+                            <td>element-id</td>
+                            <td>给表单元素设置 <code>id</code>，详见 Form 用法。</td>
+                            <td>String</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

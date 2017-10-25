@@ -44,6 +44,24 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
+            <Demo title="只读">
+                <div slot="demo">
+                    <InputNumber v-model="value7" readonly></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>通过设置<code>readonly</code>属性开启只读。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.readonly }}</i-code>
+            </Demo>
+            <Demo title="不可编辑">
+                <div slot="demo">
+                    <InputNumber v-model="value8" :editable="false"></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>通过设置<code>editable</code>属性控制是否能编辑。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.editable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="InputNumber props" h3></Anchor>
