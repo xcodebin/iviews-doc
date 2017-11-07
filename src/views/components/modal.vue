@@ -342,9 +342,9 @@
                         </tr>
                         <tr>
                             <td>spinShow</td>
-                            <td>s是否展示loading</td>
+                            <td>是否展示loading</td>
                             <td>Boolean</td>
-                            <td>true</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>spinTimeout</td>
