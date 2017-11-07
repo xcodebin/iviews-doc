@@ -343,6 +343,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>must-one</td>
+                            <td>最后一个选择无法取消</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="Table events" h3></Anchor>
