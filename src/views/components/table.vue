@@ -435,6 +435,20 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>on-verticalScr</td>
+                            <td>垂直滚动时触发</td>
+                            <td>
+                                当前滚动top值
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>on-horizontalScr</td>
+                            <td>水平滚动时触发</td>
+                            <td>
+                                当前滚动left值
+                            </td>
+                        </tr>
+                        <tr>
                             <td>on-expand</td>
                             <td>展开或收起某一行时触发</td>
                             <td>
