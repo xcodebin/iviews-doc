@@ -161,6 +161,12 @@
                             <td>String</td>
                             <td>列表为空</td>
                         </tr>
+                        <tr>
+                            <td>scrollbar</td>
+                            <td>transfer带滚动条模式</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Transfer events" h3></Anchor>
