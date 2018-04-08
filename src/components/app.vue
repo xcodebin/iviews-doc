@@ -31,7 +31,8 @@
         data () {
             return {
                 liveVisible: false,
-                iViewVisible: false
+                iViewVisible: false,
+                lang: this.$lang
             }
         },
         computed: {
@@ -40,6 +41,7 @@
             }
         },
         mounted () {
+            this.lang = this.$lang;
             if (window.localStorage.getItem('liveModalTime')) {
                 const time = parseInt(window.localStorage.getItem('liveModalTime'));
                 const today = this.getTodayUnix();

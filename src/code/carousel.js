@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Carousel v-model="value1">
+    <Carousel v-model="value1" loop>
         <CarouselItem>
             <div class="demo-carousel">1</div>
         </CarouselItem>
@@ -30,7 +30,7 @@ code.base = `
 
 code.autoplay = `
 <template>
-    <Carousel autoplay v-model="value2">
+    <Carousel autoplay v-model="value2" loop>
         <CarouselItem>
             <div class="demo-carousel">1</div>
         </CarouselItem>
@@ -94,6 +94,7 @@ code.setting = `
         :autoplay="setting.autoplay"
         :autoplay-speed="setting.autoplaySpeed"
         :dots="setting.dots"
+        :radius-dot="setting.radiusDot"
         :trigger="setting.trigger"
         :arrow="setting.arrow">
         <CarouselItem>
@@ -119,6 +120,7 @@ code.setting = `
                     autoplay: false,
                     autoplaySpeed: 2000,
                     dots: 'inside',
+                    radiusDot: false,
                     trigger: 'click',
                     arrow: 'hover'
                 }

@@ -52,6 +52,16 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
+            <Demo title="自定义 Render 函数">
+                <div slot="demo">
+                    <Button @click="renderFunc">显示render函数创建的内容</Button>
+                </div>
+                <div slot="desc">
+                    <p>使用 Render 函数自定义内容。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Message instance" h3></Anchor>
@@ -88,6 +98,12 @@
                             <td>content</td>
                             <td>提示内容</td>
                             <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>自定义描述内容，使用 Vue 的 Render 函数</td>
+                            <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -200,6 +216,17 @@
                     content: '可手动关闭的提示',
                     duration: 10,
                     closable: true
+                });
+            },
+            renderFunc () {
+                this.$Message.info({
+                    render: h => {
+                        return h('span', [
+                            '这是',
+                            h('a', 'render'),
+                            '函数渲染的'
+                        ])
+                    }
                 });
             }
         }

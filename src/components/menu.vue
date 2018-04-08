@@ -2,6 +2,10 @@
     .wrapper-header-nav .ivu-menu-item i{
         margin-right: 6px;
     }
+    .wrapper-header .ivu-menu{
+        z-index: 901;
+        box-shadow: 0 1px 1px rgba(0,0,0,.08);
+    }
 </style>
 <template>
     <Menu mode="horizontal" :active-name="currentActiveKey" @on-select="handleSelect">
@@ -25,6 +29,12 @@
                     <Icon type="ios-keypad"></Icon>
                     {{ $t('index.component') }}
                 </Menu-item>
+                <ButtonGroup>
+                    <Button type="ghost" size="small" @click="handleChangeLang" >
+                        <template v-if="lang === 'zh-CN'">EN</template>
+                        <template v-else>中文</template>
+                    </Button>
+                </ButtonGroup>
             </div>
         </div>
     </Menu>

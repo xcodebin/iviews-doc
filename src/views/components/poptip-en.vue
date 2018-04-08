@@ -242,6 +242,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>popper-class</td>
+                            <td>Setting class-name for Poptip, it is useful when using transfer.</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Poptip events" h3></Anchor>

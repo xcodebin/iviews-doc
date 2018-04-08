@@ -174,6 +174,18 @@
                             <td>Number</td>
                             <td>16</td>
                         </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>Title, new property after 2.12.0</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>icon</td>
+                            <td>Icon of title, new property after 2.12.0</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Card slot" h3></Anchor>

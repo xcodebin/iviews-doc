@@ -523,6 +523,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>closable</td>
+                            <td>是否可以按 Esc 键关闭</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
                             <td>onOk</td>
                             <td>点击确定的回调</td>
                             <td>Function</td>

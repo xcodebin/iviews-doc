@@ -127,14 +127,20 @@
                         <tr>
                             <td>show-tip</td>
                             <td>提示的显示控制，可选值为 <code>hover</code>（悬停，默认）、<code>always</code>（总是可见）、<code>never</code>（不可见）</td>
-                            <td>Boolean</td>
-                            <td>false</td>
+                            <td>String</td>
+                            <td>hover</td>
                         </tr>
                         <tr>
                             <td>tip-format</td>
                             <td>Slider 会把当前值传给 <code>tip-format</code>，并在 Tooltip 中显示 tip-format 的返回值，若为 null，则隐藏 Tooltip</td>
                             <td>Function</td>
                             <td>value</td>
+                        </tr>
+                        <tr>
+                            <td>input-size</td>
+                            <td>数字输入框的尺寸，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不填，仅在开启 show-input 时有效</td>
+                            <td>String</td>
+                            <td>default</td>
                         </tr>
                     </tbody>
                 </table>

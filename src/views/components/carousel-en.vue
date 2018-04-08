@@ -17,7 +17,7 @@
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
-                    <Carousel v-model="value1">
+                    <Carousel v-model="value1" loop>
                         <CarouselItem>
                             <div class="demo-carousel">1</div>
                         </CarouselItem>
@@ -39,7 +39,7 @@
             </Demo>
             <Demo title="Auto Play">
                 <div slot="demo">
-                    <Carousel autoplay v-model="value2">
+                    <Carousel autoplay v-model="value2" loop>
                         <CarouselItem>
                             <div class="demo-carousel">1</div>
                         </CarouselItem>
@@ -68,7 +68,13 @@
                                 <span slot="close">关</span>
                             </i-switch>
                         </FormItem>
-                        <FormItem label="自动切换速度">
+                        <FormItem label="Circular indicator">
+                            <i-switch v-model="setting.radiusDot">
+                                <span slot="open">On</span>
+                                <span slot="close">Off</span>
+                            </i-switch>
+                        </FormItem>
+                        <FormItem label="Automatic switching speed">
                             <Slider v-model="setting.autoplaySpeed" :min="300" :max="10000" :step="100"></Slider>
                         </FormItem>
                         <FormItem label="指示器位置">
@@ -97,6 +103,7 @@
                         :autoplay="setting.autoplay"
                         :autoplay-speed="setting.autoplaySpeed"
                         :dots="setting.dots"
+                        :radius-dot="setting.radiusDot"
                         :trigger="setting.trigger"
                         :arrow="setting.arrow">
                         <CarouselItem>
@@ -144,6 +151,12 @@
                             <td>auto</td>
                         </tr>
                         <tr>
+                            <td>loop</td>
+                            <td>Enable loop.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
                             <td>autoplay</td>
                             <td>Enable auto play.</td>
                             <td>Boolean</td>
@@ -160,6 +173,12 @@
                             <td>Position of the in indicator. Optional value: inside, outside, none.</td>
                             <td>String</td>
                             <td>inside</td>
+                        </tr>
+                        <tr>
+                            <td>radius-dot</td>
+                            <td>Enable radius dot type.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>trigger</td>
@@ -226,6 +245,7 @@
                     autoplay: false,
                     autoplaySpeed: 2000,
                     dots: 'inside',
+                    radiusDot: false,
                     trigger: 'click',
                     arrow: 'hover'
                 }

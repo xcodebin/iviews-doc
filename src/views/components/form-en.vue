@@ -302,6 +302,12 @@
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
+                        <tr>
+                            <td>autocomplete</td>
+                            <td>Native autocomplete property, which can be selected as off or on.</td>
+                            <td>String</td>
+                            <td>off</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Form methods" h3></Anchor>
@@ -358,6 +364,12 @@
                             <td>label-width</td>
                             <td>Label width.</td>
                             <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>label-for</td>
+                            <td>Set the property <code>for</code> to the native tag <code>label</code>, which matches the <code>element-id</code> property of the component and can click on the label to focus it.</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -558,10 +570,13 @@
                         { validator: validateAge, trigger: 'blur' }
                     ]
                 },
+                index: 1,
                 formDynamic: {
                     items: [
                         {
-                            value: ''
+                            value: '',
+                            index: 1,
+                            status: 1
                         }
                     ]
                 }
@@ -581,8 +596,11 @@
                 this.$refs[name].resetFields();
             },
             handleAdd () {
+                this.index++;
                 this.formDynamic.items.push({
-                    value: ''
+                    value: '',
+                    index: this.index,
+                    status: 1
                 });
             },
             handleRemove (index) {

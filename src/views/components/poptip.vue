@@ -243,6 +243,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>popper-class</td>
+                            <td>给 Poptip 设置 class-name，在使用 transfer 时会很有用</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>isOkShow</td>
                             <td>确认按钮是否展示</td>
                             <td>Boolean</td>

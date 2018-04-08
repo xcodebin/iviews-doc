@@ -47,6 +47,16 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.time }}</i-code>
             </Demo>
+            <Demo title="render">
+                <div slot="demo">
+                    <Button type="primary" @click="renderFunc">Open notice</Button>
+                </div>
+                <div slot="desc">
+                    <p>You can custom the render function instead of desc.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Notice instance" h3></Anchor>
@@ -89,6 +99,12 @@
                             <td>desc</td>
                             <td>The content of Notice. If empty or not set, Title-Only style will be used.</td>
                             <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>Custom description renderer. It uses Vue's render function. If both set 'render' and 'desc', there just show the content create by render.</td>
+                            <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -209,6 +225,19 @@
                     title: '这是通知标题',
                     desc: '这条通知不会自动关闭，需要点击关闭按钮才可以关闭。',
                     duration: 0
+                });
+            },
+            renderFunc () {
+                this.$Notice.success({
+                    title: 'Notification title',
+                    desc: 'The desc will hide when you set render.',
+                    render: h => {
+                        return h('span', [
+                            'This is created by ',
+                            h('a', 'render'),
+                            ' function'
+                        ])
+                    }
                 });
             }
         }

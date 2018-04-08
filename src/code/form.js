@@ -407,11 +407,12 @@ code.dynamic = `
 <template>
     <Form ref="formDynamic" :model="formDynamic" :label-width="80">
         <FormItem
-            v-for="(item, index) in formDynamic.items"
-            :key="index"
-            :label="'项目' + (index + 1)"
-            :prop="'items.' + index + '.value'"
-            :rules="{required: true, message: '项目' + (index + 1) +'不能为空', trigger: 'blur'}">
+                v-for="(item, index) in formDynamic.items"
+                v-if="item.status"
+                :key="index"
+                :label="'Item ' + item.index"
+                :prop="'items.' + index + '.value'"
+                :rules="{required: true, message: 'Item ' + item.index +' can not be empty', trigger: 'blur'}">
             <Row>
                 <Col span="18">
                     <Input type="text" v-model="item.value" placeholder="请输入..."></Input>
@@ -438,10 +439,13 @@ code.dynamic = `
     export default {
         data () {
             return {
+                index: 1,
                 formDynamic: {
                     items: [
                         {
-                            value: ''
+                            value: '',
+                            index: 1,
+                            status: 1
                         }
                     ]
                 }
@@ -461,12 +465,15 @@ code.dynamic = `
                 this.$refs[name].resetFields();
             },
             handleAdd () {
+                this.index++;
                 this.formDynamic.items.push({
-                    value: ''
+                    value: '',
+                    index: this.index,
+                    status: 1
                 });
             },
             handleRemove (index) {
-                this.formDynamic.items.splice(index, 1);
+                this.formDynamic.items[index].status = 0;
             }
         }
     }

@@ -174,6 +174,18 @@
                             <td>Number</td>
                             <td>16</td>
                         </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>标题，2.12.0 新增</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>icon</td>
+                            <td>标题前的图标，2.12.0 新增</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Card slot" h3></Anchor>

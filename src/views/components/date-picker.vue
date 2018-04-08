@@ -46,6 +46,65 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.shortcuts }}</i-code>
                 </Demo>
+
+                <Demo title="面板不联动">
+                    <div slot="demo">
+                        <DatePicker type="daterange" split-panels placeholder="Select date" style="width: 200px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>开启属性 <code>split-panels</code> 后，左右两面板在切换年、月时不联动。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.split_panels }}</i-code>
+                </Demo>
+
+                <Demo title="多选">
+                    <div slot="demo">
+                        <DatePicker type="date" multiple placeholder="Select date" style="width: 300px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>开启属性 <code>multiple</code> 后，可以多选。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.multiple }}</i-code>
+                </Demo>
+
+                <Demo title="显示星期数">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" show-week-numbers placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" show-week-numbers placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>开启属性 <code>show-week-numbers</code> 后，可以显示星期数。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.weeks }}</i-code>
+                </Demo>
+
+                <Demo title="起始日期">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" :start-date="new Date(1991, 4, 14)" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" :start-date="new Date(1991, 4, 14)" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>start-date</code> 后，可以将默认显示的日期面板设置为指定日期。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.start_date }}</i-code>
+                </Demo>
+
                 <Demo title="日期格式">
                     <div slot="demo">
                         <Row>
@@ -240,6 +299,30 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>split-panels</td>
+                            <td>开启后，左右面板不联动，仅在 <code>daterange</code> 和 <code>datetimerange</code> 下可用。</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>multiple</td>
+                            <td>开启后，可以选择多个日期，仅在 <code>date</code> 下可用。</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>show-week-numbers</td>
+                            <td>开启后，可以显示星期数。</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>start-date</td>
+                            <td>设置默认显示的起始日期。</td>
+                            <td>Date</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>confirm</td>
                             <td>是否显示底部控制栏，开启后，选择完日期，选择器不会主动关闭，需用户确认后才可关闭</td>
                             <td>Boolean</td>
@@ -292,6 +375,12 @@
                             <td>给表单元素设置 <code>id</code>，详见 Form 用法。</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>time-picker-options</td>
+                            <td>可以在 type 为 datetime 和 datetimerange 下，配置 TimePicker 的属性，比如时间间隔 steps：<code>:time-picker-options="{steps: [1, 10, 10]}"</code></td>
+                            <td>Object</td>
+                            <td>{}</td>
                         </tr>
                         </tbody>
                     </table>

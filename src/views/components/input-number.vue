@@ -23,6 +23,24 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.step }}</i-code>
             </Demo>
+            <Demo title="格式化展示">
+                <div slot="demo">
+                    <InputNumber
+                        :max="10000"
+                        v-model="value9"
+                        :formatter="value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
+                        :parser="value => value.replace(/\$\s?|(,*)/g, '')"></InputNumber>
+                    <InputNumber
+                        :max="100"
+                        v-model="value10"
+                        :formatter="value => `${value}%`"
+                        :parser="value => value.replace('%', '')"></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>通过 <code>formatter</code> 格式化数字，以展示具有具体含义的数据，往往需要配合 <code>parser</code> 一起使用。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.formatter }}</i-code>
+            </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
                     <InputNumber v-model="value3" size="small"></InputNumber>
@@ -111,6 +129,42 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>formatter</td>
+                            <td>指定输入框展示值的格式</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>parser</td>
+                            <td>指定从 formatter 里转换回数字的方式，和 formatter 搭配使用</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>readonly</td>
+                            <td>是否设置为只读</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>editable</td>
+                            <td>是否可编辑</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>precision</td>
+                            <td>数值精度</td>
+                            <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>element-id</td>
+                            <td>给表单元素设置 <code>id</code>，详见 Form 用法。</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="InputNumber events" h3></Anchor>
@@ -127,6 +181,16 @@
                             <td>on-change</td>
                             <td>数值改变时的回调，返回当前值</td>
                             <td>当前值</td>
+                        </tr>
+                        <tr>
+                            <td>on-focus</td>
+                            <td>聚焦时触发</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>on-blur</td>
+                            <td>失焦时触发</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -157,7 +221,11 @@
                 value3: 2,
                 value4: 2,
                 value5: 2,
-                value6: 1
+                value6: 1,
+                value7: 1,
+                value8: 1,
+                value9: 1000,
+                value10: 100
             }
         }
     }

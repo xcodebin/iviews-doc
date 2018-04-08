@@ -45,11 +45,28 @@
                     <Tag type="dot" closable color="green">标签二</Tag>
                     <Tag type="dot" closable color="red">标签三</Tag>
                     <Tag type="dot" closable color="yellow">标签四</Tag>
+                    <br><br>
+                    <Tag closable color="#EF6AFF" checkable>标签一</Tag>
+                    <Tag type="border" closable color="#EF6AFF" checkable>标签二</Tag>
+                    <Tag type="dot" closable color="#EF6AFF" checkable>标签三</Tag>
+                    <Tag closable color="default" checkable>标签四</Tag>
                 </div>
                 <div slot="desc">
                     <p>四种不同的颜色。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.color }}</i-code>
+            </Demo>
+            <Demo title="可选择">
+                <div slot="demo">
+                    <Tag checkable color="blue">标签一</Tag>
+                    <Tag checkable color="green">标签二</Tag>
+                    <Tag checkable color="red">标签三</Tag>
+                    <Tag checkable color="yellow">标签四</Tag>
+                </div>
+                <div slot="desc">
+                    <p>设置属性 <code>checkable</code>，可以对标签进行选择，属性 <code>checked</code> 控制当前选择状态。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.checkable }}</i-code>
             </Demo>
             <Demo title="动态添加和删除">
                 <div slot="demo">
@@ -79,6 +96,18 @@
                             <td>标签是否可以关闭</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>checkable</td>
+                            <td>标签是否可以选择</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>checked</td>
+                            <td>标签的选中状态</td>
+                            <td>Boolean</td>
+                            <td>true</td>
                         </tr>
                         <tr>
                             <td>type</td>

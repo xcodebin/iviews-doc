@@ -52,6 +52,16 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
+            <Demo title="render">
+                <div slot="demo">
+                    <Button @click="renderFunc">show message</Button>
+                </div>
+                <div slot="desc">
+                    <p>You can custom content with render</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Message instance" h3></Anchor>
@@ -88,6 +98,12 @@
                             <td>content</td>
                             <td>Prompt's message content</td>
                             <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>Custom description renderer. It uses Vue's render function.</td>
+                            <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -200,6 +216,17 @@
                     content: '可手动关闭的提示',
                     duration: 10,
                     closable: true
+                });
+            },
+            renderFunc () {
+                this.$Message.info({
+                    render: h => {
+                        return h('span', [
+                            'This is created by ',
+                            h('a', 'render'),
+                            ' function'
+                        ])
+                    }
                 });
             }
         }

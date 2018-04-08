@@ -179,8 +179,8 @@
                         <tr>
                             <td>change-on-select</td>
                             <td>When it's set to true, change will occur when selecting each level of the data set. For more details, see demos above.</td>
-                            <td>Function</td>
-                            <td>value</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>size</td>

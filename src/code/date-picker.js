@@ -266,7 +266,65 @@ code.size = `
             <DatePicker type="date" placeholder="选择日期"></DatePicker>
         </Col>
         <Col span="8">
-            <DatePicker size="large" type="date" placeholder="选择日期"></DatePicker>
+            <DatePicker size="large" type="date" placeholder="Select date"></DatePicker>
+        </Col>
+    </Row>
+</template>
+<script>
+    export default {
+
+    }
+</script>
+`;
+
+code.split_panels = `
+<template>
+    <DatePicker type="daterange" split-panels placeholder="Select date" style="width: 200px"></DatePicker>
+</template>
+<script>
+    export default {
+
+    }
+</script>
+`;
+
+code.multiple = `
+<template>
+    <DatePicker type="date" multiple placeholder="Select date" style="width: 300px"></DatePicker>
+</template>
+<script>
+    export default {
+
+    }
+</script>
+`;
+
+code.weeks = `
+<template>
+    <Row>
+        <Col span="12">
+            <DatePicker type="date" show-week-numbers placeholder="Select date" style="width: 200px"></DatePicker>
+        </Col>
+        <Col span="12">
+            <DatePicker type="daterange" show-week-numbers placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+        </Col>
+    </Row>
+</template>
+<script>
+    export default {
+
+    }
+</script>
+`;
+
+code.start_date = `
+<template>
+    <Row>
+        <Col span="12">
+            <DatePicker type="date" :start-date="new Date(1991, 4, 14)" placeholder="Select date" style="width: 200px"></DatePicker>
+        </Col>
+        <Col span="12">
+            <DatePicker type="daterange" :start-date="new Date(1991, 4, 14)" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>

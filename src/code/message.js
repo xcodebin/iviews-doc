@@ -99,4 +99,27 @@ code.closable = `
 </script>
 `;
 
+code.render = `
+<template>
+<Button @click="renderFunc">show message</Button>
+</template>
+<script>
+    export default {
+        methods: {
+            renderFunc () {
+                this.$Message.info({
+                    render: h => {
+                        return h('span', [
+                            'This is created by ',
+                            h('a', 'render'),
+                            ' function'
+                        ])
+                    }
+                });
+            }
+        }
+    }
+</script>
+`;
+
 export default code;

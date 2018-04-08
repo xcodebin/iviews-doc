@@ -1,6 +1,6 @@
 .navigate{
     font-size: 14px;
-    padding: 15px 0;
+    padding: 10px 0;
 
     &-group{
         font-size: 16px;
@@ -12,15 +12,22 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            padding-left: 34px;
         }
         span.navigate-group-span{
             font-size: 12px;
             color: #80848f;
             padding-left: 2px;
         }
+        &-item-selected{
+            span.navigate-group-span{
+                color: #2d8cf0;
+            }
+        }
     }
 }
-.ad{
+
+.asd{
     width: 100%;
     &-main{
         margin: 0 10px;
@@ -28,15 +35,16 @@
         border-radius: 6px;
         transition: all .3s ease-in-out;
         cursor: pointer;
+        position: relative;
         img{
             display: block;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
     }
     &:hover{
-        .ad-main{
-            border: 1px solid rgba(0,127,255,.3);
+        .asd-main{
+            //border: 1px solid rgba(0,127,255,.3);
         }
     }
 }

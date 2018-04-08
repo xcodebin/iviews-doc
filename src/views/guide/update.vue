@@ -25,6 +25,324 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.12.0 Human Resource Machine" h2></Anchor>
+                    <p>
+                        <code>2018-04-04</code>
+                    </p>
+                    <ul>
+                        <li>Select、AutoComplete、DatePicker、TimePicker、ColorPicker、Cascader、Dropdown 等组件支持自动识别浮层展开方向。<issue id="3156"></issue></li>
+                        <li>Table 支持表头分组。</li>
+                        <li>InputNumber 的值可以删除或设置为 null。<issue id="3174"></issue></li>
+                        <li>Card 新增属性 <code>title</code> 和 <code>icon</code>，可以更简单地设置头部。</li>
+                        <li>Tree 新增属性 <code>children-key</code>。</li>
+                        <li>Slider 新增属性 <code>input-size</code>。<issue id="3301"></issue></li>
+                        <li>Poptip 新增属性 <code>popper-class</code>。</li>
+                        <li>优化 Input 在 clearable 模式下，无数据时不显示清空按钮。</li>
+                        <li>优化 Table 筛选、排序样式。</li>
+                        <li>修复 Table 在同时固定表头和列时，不显示垂直滚动条的 bug。<issue id="3178"></issue></li>
+                        <li>修复 Table 固定列无法滚动的 bug。<issue id="2871"></issue></li>
+                        <li>修复 Table 有时表头溢出的 bug。<issue id="3178"></issue></li>
+                        <li>修复 Table 表头过长，有时导致滚动条溢出的 bug。<issue id="3178"></issue></li>
+                        <li>修复 TimePicker 设置初始输入为空数组时，报错的 bug。<issue id="3161"></issue></li>
+                        <li>修复 DatePicker 在选范围时，点击切换下一年按钮时，逻辑不正确的 bug。<issue id="3158"></issue></li>
+                        <li>修复 Sider 无法正确使用 <code>v-model</code> 的 bug。<issue id="3186"></issue></li>
+                        <li>修复 Slider 设置 step 为小数，有时无法拖动到最大值的 bug。<issue id="3195"></issue></li>
+                        <li>修复 Slider 首次点击滑条，无法触发 on-change 事件的 bug。<issue id="3291"></issue></li>
+                        <li>修复 Menu 在 accordion 模式下，事件 on-open-change 返回错误值的 bug。<issue id="3298"></issue></li>
+                        <li>修复 Select 中 Option 过长，样式不正确的 bug。<issue id="2931"></issue></li>
+                        <li>修复 Select 点击过快，错位的 bug。</li>
+                        <li>修复 FormItem 在 slot 内时，有时无法正确获取到 Form 的 bug。</li>
+                        <blockquote>特别感谢 <mention id="huanghong1125">@huanghong1125</mention> 的贡献！</blockquote>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Icon type="planet" size="18" slot="dot"></Icon>
+                    <Anchor title="2.11.0 Alto's Odyssey" h2>
+                        <span class="doc-update-important">悼念史蒂芬·霍金</span>
+                    </Anchor>
+                    <p>
+                        <code>2018-03-14</code>
+                    </p>
+                    <ul>
+                        <li>InputNumber 新增格式化展示属性 <code>formatter</code> 和 <code>parser</code>。<issue id="3081"></issue></li>
+                        <li>Input 增加 <code>wrap</code> 属性。<issue id="3086"></issue></li>
+                        <li>Page 增加 <code>transfer</code> 属性。<issue id="3112"></issue></li>
+                        <li>优化了 Select 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>修复 Menu 多层嵌套在 Vue.js 2.5.14 版本之后报错的 bug。<a href="https://github.com/iview/iview/commit/b71a171d36e1327ee8fe1cc4f35fe97887f0786c" target="_blank">b71a171</a></li>
+                        <li>修复 Select 在不同尺寸，多选样式和单选不一致的 bug。<issue id="2451"></issue></li>
+                        <li>修复 Cascader 在搜索时，样式不正确的 bug。</li>
+                        <li>修复 Input 在 <code>size="small"</code> 且使用 <code>append</code> 或 <code>prepend</code> 时，样式错误的 bug。</li>
+                        <li>优化 Collapse 样式。<issue id="2973"></issue></li>
+                        <li>新增荷兰语。<mention id="mervy-sim"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.10.1" h2></Anchor>
+                    <p>
+                        <code>2018-03-09</code>
+                    </p>
+                    <ul>
+                        <li>修复 2.10.0 版本，编译后文件过大的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.10.0 Reigns" h2></Anchor>
+                    <p>
+                        <code>2018-03-09</code>
+                    </p>
+                    <ul>
+                        <li>
+                            重构了 DatePicker 组件。<issue id="2861"></issue>
+                            <ul>
+                                <li><code>daterange</code> 支持从右往左选择。<issue id="2731"></issue></li>
+                                <li>新增 <code>split-panels</code> 属性，开启后，左右两面板可以不联动。<issue id="2067"></issue></li>
+                                <li>新增 <code>multiple</code> 属性，开启后，可以选择多个日期。</li>
+                                <li>新增 <code>start-date</code> 属性，可以设置面板展开时默认显示的日期。<issue id="2814"></issue></li>
+                                <li>新增属性 <code>show-week-numbers</code>，开启后，可以显示星期数。</li>
+                                <li>新增属性 <code>time-picker-options</code>，可以在 type 为 <code>datetime</code> 和 <code>datetimerange</code> 下，配置 TimePicker 的属性，比如时间间隔 <code>steps</code>。<issue id="3091"></issue></li>
+                                <li>修复无法动态修改 <code>type</code> 的问题。<issue id="2608"></issue></li>
+                                <li>修复使用 <code>v-model</code> 绑定的数据，有时无法更新面板的问题。<issue id="2386"></issue></li>
+                                <li>修复手动输入禁用的日期报错的问题。<issue id="2544"></issue></li>
+                            </ul>
+                        </li>
+                        <li>移除全局样式 <code>ul</code> 和 <code>ol</code>。<issue id="3061"></issue></li>
+                        <li>优化了 Slider、Switch 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>修复了 Slider 的 <code>step</code> 属性设置为小数时的 bug。<issue id="2984"></issue></li>
+                        <li>修复 Select 在无 Option 时，按下方向键报错的 bug。</li>
+                        <li>修复 Avatar 使用中文字符，有时不能居中的 bug。<issue id="3033"></issue></li>
+                        <li>修复 Carousel 在没有使用 <code>v-model</code> 时，指示器不更新的 bug。<issue id="3038"></issue></li>
+                        <li>修复 Input 在 <code>size="small"</code> 且使用 <code>prepend</code> 或 <code>append</code> 时，样式不正确的 bug。<issue id="3089"></issue></li>
+                        <li>新增希腊语。<mention id="d4rth0nyx"></mention></li>
+                        <li>优化繁体中文。</li>
+                        <li>修复罗马尼亚语文件错误的问题。<issue id="3060"></issue></li>
+                        <blockquote>特别感谢 <mention id="SergioCrisostomo"></mention> 和 <mention id="Xotic750"></mention> 的贡献！</blockquote>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.9.2" h2></Anchor>
+                    <p>
+                        <code>2018-02-02</code>
+                    </p>
+                    <ul>
+                        <li>修复 Slider 无法正常触发 <code>on-change</code> 事件的 bug。<issue id="2975"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.9.1" h2></Anchor>
+                    <p>
+                        <code>2018-01-30</code>
+                    </p>
+                    <ul>
+                        <li>修复了 Slider 在 2.9.0 版本下，设置 <code>max</code> 大于 100 时的 bug。<issue id="2914"></issue></li>
+                        <li>优化了 Avatar 的默认背景色。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.9.0 Agent A" h2></Anchor>
+                    <p>
+                        <code>2018-01-24</code>
+                    </p>
+                    <ul>
+                        <li>更新依赖，以及使用 browserlist。<issue id="2835"></issue> <issue id="2837"></issue> <issue id="2839"></issue></li>
+                        <li>重构了 Slider 组件。<issue id="2393"></issue></li>
+                        <li>优化了 Button、Radio、Checkbox 样式，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>Menu 支持多级嵌套。</li>
+                        <li>ColorPicker 新增是否显示色彩滑块的属性 <code>hue</code>。<issue id="2672"></issue></li>
+                        <li>AutoComplete 新增 <code>placement</code> 属性。<issue id="2803"></issue></li>
+                        <li>Input 新增 <code>clearable</code> 属性。<issue id="2884"></issue></li>
+                        <li>Dropdown 新增事件 <code>@on-clickoutside</code>。<issue id="2783"></issue></li>
+                        <li>修复 Table 固定列使用排序和筛选功能时的 bug。<issue id="2832"></issue></li>
+                        <li>修复 Table 在筛选时有时报错的 bug。<issue id="2352"></issue></li>
+                        <li>修复 Table 在有滚动条时，数据置空后，表头错误的 bug。<issue id="2775"></issue></li>
+                        <li>修复 Cascader 数据 label 为空时，报错的 bug。<issue id="2722"></issue></li>
+                        <li>修复 Cascader 在 <code>change-on-select</code> 模式下，动态改变 data 无法选中绑定值的 bug。<issue id="2793"></issue></li>
+                        <li>修复 Dropdown 在 <code>trigger="click"</code> 有时报错的问题。<issue id="2780"></issue></li>
+                        <li>修复 Slider 在 Modal 内使用，<code>show-tip="always"</code> 时，Tooltip 错位的 bug。<issue id="2852"></issue></li>
+                        <li>优化 Table 在多选模式下，无数据时，无法点击全选按钮。<issue id="2823"></issue></li>
+                        <li>优化 $Notice 使用 Render 时的样式。<issue id="2752"></issue></li>
+                        <li>优化 Input 在 textarea 模式下的样式。</li>
+                        <li>优化 Select 在 filterable 模式下， disabled 时的样式。<issue id="2893"></issue></li>
+                        <li>新增印地语。<mention id="rajnikant307"></mention></li>
+                        <li>新增波斯语。<mention id="roshangara"></mention></li>
+                        <li>新增罗马尼亚语。<mention id="Leonard1980"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Icon type="ios-snowy" class="ivu-load-loop doc-update-loop" style="font-size: 32px;color: rgb(220,50,51)" slot="dot"></Icon>
+                    <Anchor title="2.8.0 Oceanhorn" h2>
+                        <span class="doc-update-important">Merry Christmas</span>
+                    </Anchor>
+                    <p>
+                        <code>2017-12-25</code>
+                    </p>
+                    <ul>
+                        <li>新增响应式布局组件 Layout（包括 Layout、Header、Sider、Content、Footer 5个组件）。<issue id="2646"></issue> <mention id="lison16"></mention> <router-link to="/components/layout">查看</router-link></li>
+                        <li>Tag 支持自定义颜色。<issue id="2644"></issue></li>
+                        <li>$Message 和 $Notice 支持 Render 函数。<issue id="2667"></issue></li>
+                        <li>Affix 优化滚动时的占位区域高度。<issue id="2628"></issue></li>
+                        <li>$Modal 支持 ESC 键关闭。<issue id="2362"></issue></li>
+                        <li>TimeRange 也增加 steps 属性。<issue id="2580"></issue></li>
+                        <li>修复无法按需加载 Submenu 组件的 bug。<issue id="2553"></issue></li>
+                        <li>修复在 Vue 2.5.11 版本下，Circle 和 Switch 标签名警告的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.7.4" h2></Anchor>
+                    <p>
+                        <code>2017-12-01</code>
+                    </p>
+                    <ul>
+                        <li>修复部分组件在按需加载时报错的问题。<issue id="2537"></issue></li>
+                        <li>Input 增加了更多的类型。<issue id="2526"></issue></li>
+                        <li>新增意大利语。<mention id="lucagentile"></mention></li>
+                        <li>新增泰语。<mention id="NatJNP"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.7.3" h2></Anchor>
+                    <p>
+                        <code>2017-11-16</code>
+                    </p>
+                    <ul>
+                        <li>修复 2.7.0 版本下，无法在 Nuxt.js 中使用的问题。</li>
+                        <li>修复 InputNumber 的一个问题。<issue id="2418"></issue></li>
+                        <li>修改了西班牙语。<issue id="2426"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.7.2" h2></Anchor>
+                    <p>
+                        <code>2017-11-14</code>
+                    </p>
+                    <ul>
+                        <li>修复 Tabs 销毁时报错的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.7.1" h2></Anchor>
+                    <p>
+                        <code>2017-11-14</code>
+                    </p>
+                    <ul>
+                        <li>修复 Tabs 组件报错的问题。<issue id="2407"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.7.0 Lara Croft GO" h2></Anchor>
+                    <p>
+                        <code>2017-11-13</code>
+                    </p>
+                    <ul>
+                        <li>i18n 兼容 vue-i18n 6.x+ 版本，并支持通过 <code>script</code> 标签引入，完善国际化使用文档。<router-link to="/docs/guide/i18n">查看</router-link></li>
+                        <li>现在可以更好地按需加载组件了。<router-link to="/docs/guide/start">查看</router-link></li>
+                        <li>Form 验证方法 <code>validate</code> 支持 Promise。<issue id="2018"></issue></li>
+                        <li>Form 新增 <code>autocomplete</code> 属性。</li>
+                        <li>BreadcrumbItem 的 <code>href</code> 属性支持传入 vue-router 的 to 对象，同时新增 <code>to</code> 属性，与 href 相同，未来将废弃 href 属性。<issue id="2214"></issue></li>
+                        <li>Input 新增 <code>spellcheck</code> 属性，部分可输入类组件设置了默认的 <code>autocomplete</code> 和 <code>spellcheck</code> 属性。<issue id="2324"></issue></li>
+                        <li>Modal 增加事件 <code>on-visible-change</code>。</li>
+                        <li>Transfer 新增选中项变化事件 <code>on-selected-change</code>。<issue id="2019"></issue></li>
+                        <li>InputNumber 新增事件 <code>on-focus</code> 和 <code>on-blur</code>。</li>
+                        <li>Avatar 样式调整为居中。<issue id="1926"></issue></li>
+                        <li>修复 InputNumber 有时无法输入范围内数字的 bug。<issue id="2205"></issue></li>
+                        <li>修复 Table 在未设置 width，垂直滚动时，固定列出现错位的 bug。<issue id="2102"></issue></li>
+                        <li>修复 Table 在可展开且有固定列时，固定一列重复渲染的 bug。<issue id="1648"></issue></li>
+                        <li>修复 DatePicker、TimePicker 第一次点击清除按钮时，无法触发 <code>on-change</code> 事件的 bug。<issue id="2215"></issue></li>
+                        <li>修复 DatePicker、TimePicker、ColorPicker 在 FormItem 内使用时，图标位置不正确的 bug。<issue id="2219"></issue></li>
+                        <li>修复 TimePicker 在 IE 下的一个问题。<issue id="2330"></issue></li>
+                        <li>修复 Page 在 simple 模式下，输入页码为空时，回车显示为 NaN 的 bug。<issue id="1575"></issue></li>
+                        <li>修复 Tooltip 在动态改变 content 时，错位的 bug。<issue id="1482"></issue></li>
+                        <li>增加乌克兰语。<mention id="f3man"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.6.0 FRAMED" h2></Anchor>
+                    <p>
+                        <code>2017-10-26</code>
+                    </p>
+                    <ul>
+                        <li>重构 Tree 组件，支持 Render 函数、异步加载数据，完善文档。<mention id="SergioCrisostomo"></mention></li>
+                        <li>Carousel 增加循环滚动属性 <code>loop</code> 和圆形指示器属性 <code>radius-dot</code>。<issue id="2181"></issue> <mention id="lisafra"></mention></li>
+                        <li>Tabs 标签页过多时，可以进行滚动。<issue id="1031"></issue> <mention id="marxy"></mention></li>
+                        <li>Date 面板可根据当前语言包显示当地的年月格式。<issue id="2097"></issue> <mention id="SergioCrisostomo"></mention></li>
+                        <li>Table 导出 csv 数据方法新增 <code>callback</code>、<code>quoted</code> 和 <code>separator</code> 选项。<issue id="2114"></issue></li>
+                        <li>Table 新增过滤事件 <code>on-filter-change</code>。<issue id="2078"></issue></li>
+                        <li>Tag 新增可选择属性 <code>checkable</code>。<issue id="2115"></issue></li>
+                        <li>Scroll 新增边缘距离属性 <code>distance-to-edge</code>。<issue id="2137"></issue></li>
+                        <li>修复 Scroll 组件在 Firefox 浏览器下，无法触发滚动事件的 bug。<issue id="2135"></issue></li>
+                        <li>修复 Select 在 remote、multiple 模式下，主动清空数据后，未清空选中项的 bug。<issue id="2066"></issue></li>
+                        <li>修复 Poptip 在 transfer 模式下，点击内部会关闭浮层的 bug。<issue id="1700"></issue></li>
+                        <li>修复 Tabs 的 TabPane 无法使用 v-for 动态更新的 bug。<issue id="2100"></issue></li>
+                        <li>修复 Cascader 在 trigger 为 hover 模式下，只有一项时，有时会直接选中的 bug。<issue id="1922"></issue></li>
+                        <li>修复 Input 在 FormItem 内，size 为 small 时，icon 错位的 bug。<issue id="2149"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.5.1" h2></Anchor>
+                    <p>
+                        <code>2017-10-18</code>
+                    </p>
+                    <ul>
+                        <li>修复 2.5.0 版本下，DatePicker 绑定数据为空时，初始化显示为 false 的bug。<issue id="2119"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.5.0 Old Man’s Journey" h2></Anchor>
+                    <p>
+                        <code>2017-10-17</code>
+                    </p>
+                    <ul>
+                        <li><strong>发布后台管理系统模板 <a href="https://github.com/iview/iview-admin" target="_blank">iview-admin</a>。</strong></li>
+                        <li>新增无限滚动组件 Scroll。<router-link to="/components/scroll">查看</router-link></li>
+                        <li>Date 会根据当前语言包自动识别每周起始日。<issue id="1809"></issue></li>
+                        <li>InputNumber 新增 readonly 和 editable 属性。</li>
+                        <li>优化 InputNumber 实时输入的表现。<issue id="2059"></issue></li>
+                        <li>优化 Date 在输入一个错误日期格式后失焦的表现。<issue id="2002"></issue></li>
+                        <li>修复 Date 在 SSR 无法通过 Form 验证的问题。<issue id="1971"></issue></li>
+                        <li>修复 Date 在 IE11 下的一个问题。<issue id="1937"></issue></li>
+                        <li>修复 Date、Dropdown 在 transfer 模式下，body 宽度为 100% 时，样式错误的bug。<issue id="2050"></issue></li>
+                        <li>修复 FormItem 在动态设置 error 时，有时错误信息无法清空的bug。<issue id="2047"></issue></li>
+                        <li>修复 Badge 在开启 dot 且 count 为 0 时，扔显示 dot 的bug。</li>
+                        <li>修复 InputNumber 在 precision 为 0 时，无法设置精度为整数的bug。<issue id="2026"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.4.0 Monument" h2></Anchor>
+                    <p>
+                        <code>2017-09-25</code>
+                    </p>
+                    <ul>
+                        <li>InputNumber 新增精度属性 <code>precision</code>。<issue id="1810"></issue></li>
+                        <li>Spin 增加全局用法 <code>$Spin</code>。<issue id="1063"></issue></li>
+                        <li>Spin 样式调整，<code>fix</code> 时不再强制设置父级宽高。</li>
+                        <li>Table 支持自适应宽度。<issue id="690"></issue></li>
+                        <li>Table 新增加载中属性 <code>loading</code>，及具名 slot <code>loading</code>。<issue id="704"></issue></li>
+                        <li>Table 新增取消单选方法 <code>clearCurrentRow</code>。<issue id="1372"></issue></li>
+                        <li>Table 事件 <code>@on-row-click</code> 和 <code>@on-row-dblclick</code> 返回参数增加 index。<issue id="693"></issue></li>
+                        <li>Date 支持动态切换 type。<issue id="1851"></issue></li>
+                        <li>Steps 支持动态设置 Step。</li>
+                        <li>所有表单类组件都支持设置 <code>name</code> 属性。<issue id="812"></issue></li>
+                        <li>FormItem 新增 <code>label-for</code> 属性，Input、AutoComplete、Cascader、Date、InputNumber、Select(filterable) 增加 <code>element-id</code> 属性，当设置一致时，点击 label 可以聚焦对应的控件。<issue id="433"></issue></li>
+                        <li>修改 Menu 的 z-index 值。<issue id="823"></issue></li>
+                        <li>优化 Message 样式。<issue id="1881"></issue></li>
+                        <li>优化 Select 样式。<issue id="860"></issue></li>
+                        <li>优化 Date 按 tab 建的交互。<issue id="1930"></issue></li>
+                        <li>修复 Table 在 stripe 模式下，hover 样式不正确的bug。<issue id="1380"></issue></li>
+                        <li>修复 Tabs 在关闭所有页签后，报错的bug。<issue id="1842"></issue></li>
+                        <li>修复 Select 在 remote 模式下，高亮搜索词时，再次键入并选择，query 不正确的bug。<issue id="1865"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.3.1 & 2.3.2" h2></Anchor>
+                    <p>
+                        <code>2017-09-10</code>
+                    </p>
+                    <ul>
+                        <li>发布 <router-link to="/docs/guide/iview-loader">iview-loader</router-link>。</li>
+                        <li>修复 Switch 使用 true-value 和 false-value 时，设置 slot 无法正确显示的bug。<issue id="1797"></issue></li>
+                        <li>修复 Select 共用同一份 Option 数据时，仅第一个可以选择的bug。<issue id="1807"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.3.0 Lumino City" h2></Anchor>
                     <p>
                         <code>2017-09-05</code>

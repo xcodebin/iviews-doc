@@ -36,6 +36,15 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
+            <Demo title="可清空">
+                <div slot="demo">
+                    <Input v-model="value14" placeholder="Enter something..." clearable style="width: 200px"></Input>
+                </div>
+                <div slot="desc">
+                    <p>开启属性 <code>clearable</code> 可显示清空按钮。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.clearable }}</i-code>
+            </Demo>
             <Demo title="带Icon的输入框">
                 <div slot="demo">
                     <Input v-model="value4" icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></Input>
@@ -166,6 +175,12 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>clearable</td>
+                            <td>是否显示清空按钮</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
                             <td>disabled</td>
                             <td>设置输入框为禁用状态</td>
                             <td>Boolean</td>
@@ -224,6 +239,18 @@
                             <td>给表单元素设置 <code>id</code>，详见 Form 用法。</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>spellcheck</td>
+                            <td>原生的 spellcheck 属性</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>wrap</td>
+                            <td>原生的 wrap 属性，可选值为 hard 和 soft，仅在 textarea 下生效</td>
+                            <td>String</td>
+                            <td>soft</td>
                         </tr>
                     </tbody>
                 </table>

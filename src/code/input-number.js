@@ -66,4 +66,60 @@ code.disabled = `
 </script>
 `;
 
+code.readonly = `
+<template>
+    <InputNumber v-model="value7" readonly></InputNumber>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value7: 1
+            }
+        }
+    }
+</script>
+`;
+
+code.editable = `
+<template>
+    <InputNumber v-model="value8" :editable="false"></InputNumber>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value8: 1
+            }
+        }
+    }
+</script>
+`;
+
+code.formatter = `
+<template>
+    <div>
+        <InputNumber
+            :max="10000"
+            v-model="value9"
+            :formatter="value => \`$ $\{value\}\`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
+            :parser="value => value.replace(/\$\s?|(,*)/g, '')"></InputNumber>
+        <InputNumber
+            :max="100"
+            v-model="value10"
+            :formatter="value => \`$\{value\}%\`"
+            :parser="value => value.replace('%', '')"></InputNumber>
+    </div>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value9: 1000,
+                value10: 100
+            }
+        }
+    }
+</script>
+`;
 export default code;

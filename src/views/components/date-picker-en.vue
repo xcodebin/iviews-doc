@@ -46,6 +46,65 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.shortcuts }}</i-code>
                 </Demo>
+
+                <Demo title="Split Panels">
+                    <div slot="demo">
+                        <DatePicker type="daterange" split-panels placeholder="Select date" style="width: 200px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>Open property <code>split-panels</code>, the left and right panels are not interconnected during the switching year and month.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.split_panels }}</i-code>
+                </Demo>
+
+                <Demo title="Multiple">
+                    <div slot="demo">
+                        <DatePicker type="date" multiple placeholder="Select date" style="width: 300px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>Open property <code>multiple</code>, you can select multiple.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.multiple }}</i-code>
+                </Demo>
+
+                <Demo title="Show Week Numbers">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" show-week-numbers placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" show-week-numbers placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>Open property <code>show-week-numbers</code>, can display the week numbers.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.weeks }}</i-code>
+                </Demo>
+
+                <Demo title="Start Date">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" :start-date="new Date(1991, 4, 14)" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" :start-date="new Date(1991, 4, 14)" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>Set property <code>start-date</code> to a custom date, you can change the default display date panel to the specified date.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.start_date }}</i-code>
+                </Demo>
+
                 <Demo title="Date Format">
                     <div slot="demo">
                         <Row>
@@ -240,6 +299,30 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>split-panels</td>
+                            <td>When open it, the left and right panels are not interconnected during the switching year and month. Only work in <code>daterange</code> and <code>datetimerange</code> type.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>multiple</td>
+                            <td>When open it, you can select multiple dates. Only work in <code>date</code> type.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>show-week-numbers</td>
+                            <td>When open it, you can display the numbers of week.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>start-date</td>
+                            <td>Set the start date of the default display.</td>
+                            <td>Date</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>confirm</td>
                             <td>Display the control panel at the bottom of the DatePicker or not. If enabled, DatePicker won't close actively but wait user to confirm.</td>
                             <td>Boolean</td>
@@ -292,6 +375,12 @@
                             <td>Set the <code>id</code> for the input element, more info can be found in Form.</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>time-picker-options</td>
+                            <td>TimePicker attributes can be configured under the type datetime and datetimerange, such as steps: <code>:time-picker-options="{steps: [1, 10, 10]}"</code></td>
+                            <td>Object</td>
+                            <td>{}</td>
                         </tr>
                         </tbody>
                     </table>

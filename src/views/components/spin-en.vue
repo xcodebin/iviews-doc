@@ -134,6 +134,19 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.status }}</i-code>
             </Demo>
+            <Demo title="Full screen loading">
+                <div slot="demo">
+                    <Button type="primary" @click="handleSpinShow">Full screen loading for 3 seconds</Button>
+                    <Button type="primary" @click="handleSpinCustom">Customize display content</Button>
+                </div>
+                <div slot="desc">
+                    <p>Use the <code>$Spin</code> method to load globally.</p>
+                    <p>You can use the Render function to customize the display content.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.$spin }}</i-code>
+            </Demo>
+
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Spin props" h3></Anchor>
@@ -198,6 +211,33 @@
             return {
                 code: Code,
                 spinShow: true
+            }
+        },
+        methods: {
+            handleSpinShow () {
+                this.$Spin.show();
+                setTimeout(() => {
+                    this.$Spin.hide();
+                }, 3000);
+            },
+            handleSpinCustom () {
+                this.$Spin.show({
+                    render: (h) => {
+                        return h('div', [
+                            h('Icon', {
+                                'class': 'demo-spin-icon-load',
+                                props: {
+                                    type: 'load-c',
+                                    size: 18
+                                }
+                            }),
+                            h('div', 'Loading')
+                        ])
+                    }
+                });
+                setTimeout(() => {
+                    this.$Spin.hide();
+                }, 3000);
             }
         }
     }

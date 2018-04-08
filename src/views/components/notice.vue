@@ -47,6 +47,17 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.time }}</i-code>
             </Demo>
+            <Demo title="Render 函数">
+                <div slot="demo">
+                    <Button type="primary" @click="renderFunc">打开提醒</Button>
+                </div>
+                <div slot="desc">
+                    <p>你可以自定义 Render 函数来替代 desc</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
+
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Notice instance" h3></Anchor>
@@ -89,6 +100,12 @@
                             <td>desc</td>
                             <td>通知提醒的内容，为空或不填时，自动应用仅标题模式下的样式</td>
                             <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>自定义描述内容，使用 Vue 的 Render 函数，如果同时设置了 render 和 desc，则只显示 render 的内容</td>
+                            <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -209,6 +226,19 @@
                     title: '这是通知标题',
                     desc: '这条通知不会自动关闭，需要点击关闭按钮才可以关闭。',
                     duration: 0
+                });
+            },
+            renderFunc () {
+                this.$Notice.success({
+                    title: '这是通知标题',
+                    desc: '当你定义了render之后，这个描述会被覆盖',
+                    render: h => {
+                        return h('span', [
+                            '这是',
+                            h('a', 'render'),
+                            '函数渲染的'
+                        ])
+                    }
                 });
             }
         }
