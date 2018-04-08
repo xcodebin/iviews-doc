@@ -35,7 +35,7 @@ config.plugins = (config.plugins || []).concat([
         }
     }),
     new HtmlWebpackPlugin({
-        filename: '../index_prod.html',
+        filename: '../index_prod_2.html',
         template: './src/template/index.ejs',
         inject: false
     })
