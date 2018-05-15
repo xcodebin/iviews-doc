@@ -9,7 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var fs = require('fs');
 
-config.output.publicPath = path.join('./dist/');
+config.output.publicPath = path.join('./distDoc/');
 config.output.filename = '[name].[hash].js';                 // 带hash值的入口js名称
 config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路由js名称
 
@@ -35,7 +35,7 @@ config.plugins = (config.plugins || []).concat([
         }
     }),
     new HtmlWebpackPlugin({
-        filename: '../index_prod.html',
+        filename: 'doc_prod.html',
         template: './src/template/index.ejs',
         inject: false
     })
